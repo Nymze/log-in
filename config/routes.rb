@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
+  
 
   root 'static_pages#index'
+
   get 'answer', to: 'static_pages#show'
   resources :users
 
