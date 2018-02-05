@@ -11,13 +11,280 @@
 
 <% else %>
 
+<head>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  </head>
+
+  </br>
+</br>
+
 <h1> Hello My friend </h1>
 
-<h2> and welcome back </h2>
+<h2> Drag the Scene below around </h2>
 
-<p> Please Login </p>
+<p> Or </p>
 
 <p> <%= link_to "Log in", login_path, class: "btn btn-success" %> </p>
 
+<div class ="aframe">
 
+<!--	
+<a-scene>
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+ -->
+ 
+ <a-scene> 
+
+		 <a-assets> 
+
+		 <!-- <a-asset-item id="chair.obj" 		 	src="https://ucarecdn.com/fa805aec-136c-49d2-ac61-f9fd917c4f94/"></a-asset-item> -->
+		 <img id="skyTexture" src="https://ucarecdn.com/2f70cbd8-70e6-4f21-9613-13c54e7b60fd/">  
+		 <img id="cursor" src="https://ucarecdn.com/05060555-0b9b-4f00-bf91-c536616281b9/"> 
+
+		 </a-assets>
+
+		 <!-- Cursor -->
+
+			<!-- Cursor up -->
+
+	<!--	<a-image id="cursor-up" src="#cursor"  position="-2.043 1.9 4.275" rotation="0 -2.750 0" scale="0.553 0.553 0.553"  move="target:#planche;position: 0 1 0"> 
+		
+		<a-animation attribute="scale" begin="mouseenter" dur="300" to="0.620 0.620 0.6200" ></a-animation>
+		<a-animation attribute="scale" begin="mouseleave" dur="300" to="0.553 0.553 0.553" ></a-animation> -->
+		 
+		
+	
+
+
+		</a-image> 
+
+			<!-- Cursor down -->
+
+		<!-- <a-image id="cursor-down" src="#cursor"  position="-2.043 0.9 4.275" rotation ="0 -2.750 180" scale="0.553 0.553 0.553"  move="target:#planche;position:0 -0.8 0"> 
+		
+		<a-animation attribute="scale" begin="mouseenter" dur="300" to="0.620 0.620 0.620" ></a-animation>
+		<a-animation attribute="scale" begin="mouseleave" dur="300" to="0.553 0.553 0.553" ></a-animation> -->
+		
+		</a-image> 
+
+		
+		
+         <!-- <a-box position="0 0 0" rotation="0 45 0" color="#4CC3D9"></a-box> -->
+
+		 <a-entity id="planche"> <!-- Panel of movies -->
+
+		 <a-entity id="front">
+
+		 <!-- Ligne Front down -->
+
+		 <a-entity id="lignedown" position="0 0.8 0" rotation="0 0 0">
+		 
+		 <a-curvedimage id="forest" src="https://ucarecdn.com/f1dd2073-afb7-4ffb-a3ba-37ccc490b832/" radius="6" theta-length="16" height="1"
+                     position="-1.170 0 -1.608" 
+					 rotation="0 28.361 0" 
+					 opacity="1">  
+
+		<a-animation attribute="scale" begin="mouseenter" dur="300" to="0.960 0.960 0.960" ></a-animation>
+		<a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1" ></a-animation>
+
+
+		</a-curvedimage>
+		
+
+
+		<a-curvedimage id="godfather" src="https://ucarecdn.com/3e0baccc-44df-4bc2-982b-84cd908acca0/" radius="6" theta-length="16" height="1"
+                     position="-1.157 0.013 -1.600" 
+					 rotation="0 11.345 0" 
+					 opacity="1"> 
+
+		<a-animation attribute="scale" begin="mouseenter" dur="300" to="0.960 0.960 0.960" ></a-animation>
+		<a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1" ></a-animation>
+
+		</a-curvedimage>
+
+
+		<a-curvedimage id="starwars" src="https://ucarecdn.com/e9a18bd4-bd51-4919-846d-4ae69a124d15/" radius="6" theta-length="16" height="1"
+                     position="-1.157 0.013 -1.600" 
+					 rotation="0 -5.263 0" 
+					 opacity="1"> 
+
+		<a-animation attribute="scale" begin="mouseenter" dur="300" to="0.960 0.960 0.960" ></a-animation>
+		<a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1" ></a-animation>
+
+		</a-curvedimage>
+		
+
+		</a-entity>
+
+		 <!-- Ligne Front up-->
+
+		 <a-entity id="ligneup" position="0 2 0" rotation="0 0 0">
+
+		 <a-curvedimage id="spirit" src="https://ucarecdn.com/5022d947-6ec1-40f9-9004-39a0afaecc11/" radius="6" theta-length="16" height="1"
+                     position="-1.170 0 -1.608" 
+					 rotation="0 28.361 0" 
+					 opacity="1">  
+
+		<a-animation attribute="scale" begin="mouseenter" dur="300" to="0.960 0.960 0.960" ></a-animation>
+		<a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1" ></a-animation>
+
+		</a-curvedimage>
+		
+
+
+		<a-curvedimage id="shawshank" src="https://ucarecdn.com/4a73daca-ea7f-4729-a7de-b789cc57bd06/" radius="6" theta-length="16" height="1"
+                     position="-1.157 0.013 -1.600" 
+					 rotation="0 11.345 0" 
+					 opacity="1"> 
+
+		<a-animation attribute="scale" begin="mouseenter" dur="300" to="0.960 0.960 0.960" ></a-animation>
+		<a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1" ></a-animation>
+
+		</a-curvedimage>
+
+
+		<a-curvedimage id="seven" src="https://ucarecdn.com/be3dc626-e4f7-433a-8f3a-eadd0565c2e5/" radius="6" theta-length="16" height="1"
+                     position="-1.157 0.013 -1.600" 
+					 rotation="0 -5.263 0" 
+					 opacity="1"> 
+
+		 <a-animation attribute="scale" begin="mouseenter" dur="300" to="0.960 0.960 0.960" ></a-animation>
+		<a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1" ></a-animation>
+
+		</a-curvedimage>
+
+
+		</a-entity>
+
+		</a-entity>
+
+
+		<!-- Entity Right side -->
+
+		<a-entity id="rightside" position="-1.835 0.040 0.239" rotation="0 -56.436 0" > 
+
+			<!-- Entity Right down -->
+
+		 <a-entity id="lignerightdown" position="0 0.8 0" rotation="0 0 0">
+		 
+		 <a-curvedimage id="12men" src="https://ucarecdn.com/4d32956f-e224-4f80-b8c6-0868e4c22af1/" radius="6" theta-length="16" height="1"
+                     position="-1.170 0 -1.608" 
+					 rotation="0 28.361 0" 
+					 opacity="1">  
+
+		<a-animation attribute="scale" begin="mouseenter" dur="300" to="0.960 0.960 0.960" ></a-animation>
+		<a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1" ></a-animation>
+		
+
+		</a-curvedimage>
+		
+
+
+		<a-curvedimage id="leon" src="https://ucarecdn.com/4f2fedce-1dad-43ce-8aae-2bb938fb1141/" radius="6" theta-length="16" height="1"
+                     position="-1.157 0.013 -1.600" 
+					 rotation="0 11.345 0" 
+					 opacity="1"> 
+
+		<a-animation attribute="scale" begin="mouseenter" dur="300" to="0.960 0.960 0.960" ></a-animation>
+		<a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1" ></a-animation>
+
+		</a-curvedimage>
+
+
+		<a-curvedimage id="lambs" src="https://ucarecdn.com/2bccfb1d-0b79-4029-a4e8-566a9afc8f0e/" radius="6" theta-length="16" height="1"
+                     position="-1.157 0.013 -1.600" 
+					 rotation="0 -5.263 0" 
+					 opacity="1"> 
+
+		<a-animation attribute="scale" begin="mouseenter" dur="300" to="0.960 0.960 0.960" ></a-animation>
+		<a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1" ></a-animation>
+
+		</a-curvedimage>
+		
+
+		</a-entity>
+
+		 <!-- Ligne right up-->
+
+		 <a-entity id="lignerightup" position="0 2 0" rotation="0 0 0">
+
+		 <a-curvedimage id="inception" src="https://ucarecdn.com/c5e2833b-d5ca-4450-989d-d60f3a49d55c/" radius="6" theta-length="16" height="1"
+                     position="-1.170 0 -1.608" 
+					 rotation="0 28.361 0" 
+					 opacity="1"> 
+					 
+		<a-animation attribute="scale" begin="mouseenter" dur="300" to="0.960 0.960 0.960" ></a-animation>
+		<a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1" ></a-animation>
+
+		</a-curvedimage>
+		
+
+
+		<a-curvedimage id="departed" src="https://ucarecdn.com/c4aac65c-270f-42f3-b3b4-8aea642bd132/" radius="6" theta-length="16" height="1"
+                     position="-1.157 0.013 -1.600" 
+					 rotation="0 11.345 0" 
+					 opacity="1">
+					 
+		<a-animation attribute="scale" begin="mouseenter" dur="300" to="0.960 0.960 0.960" ></a-animation>
+		<a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1" ></a-animation>
+
+		</a-curvedimage>
+
+
+		<a-curvedimage id="darknight" src="https://ucarecdn.com/195cc47c-cfc9-4820-bda4-a687941767b2/" radius="6" theta-length="16" height="1"
+                     position="-1.157 0.013 -1.600" 
+					 rotation="0 -5.263 0" 
+					 opacity="1"> 
+
+		<a-animation attribute="scale" begin="mouseenter" dur="300" to="0.960 0.960 0.960" ></a-animation>
+		<a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1" ></a-animation>
+
+		</a-curvedimage>
+
+		</a-entity>
+
+		</a-entity>
+
+		
+		</a-entity>
+
+
+		<!-- Cylinder --> 
+		<a-entity>
+        <a-cylinder position="-1.060 0.110 -1.546" scale="1.398 0.222 1.398 " radius="4" height="2" side="back" open-ended="true"
+                    color="#FFF"></a-cylinder>
+      </a-entity>  
+
+	  <!-- Sky and lights-->
+
+			 <a-sky color="#000000"></a-sky> 
+
+			 <!-- <a-sky src="#skyTexture"></a-sky> -->
+			  
+      <a-light type="directional" color="#fff" intensity="0.2" position="-1 2 1"></a-light>
+      <!-- <a-light type="ambient" color="#fff"></a-light> -->
+
+	  <!-- Chair -->
+
+	 <!-- <a-entity obj-model="obj: #chair.obj" position=" -1.787 -0.360 -0.552" rotation="0 -90.298 0" scale="0.130 0.130 0.130" ></a-entity> -->
+
+	  <!-- Camera --> 
+
+			<a-entity position="-0.95 0 0.239" rotation="0 165 0">
+				<a-camera> <a-cursor color=" #ffffff"></a-cursor>  </a-camera>
+			</a-entity>
+
+	</a-scene>
+
+
+
+
+</div>
+ </br>
+</br>
 <% end %>
