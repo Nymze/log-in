@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  
-
   root 'static_pages#index'
 
   get 'answer', to: 'static_pages#show'
