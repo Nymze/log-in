@@ -1,0 +1,23 @@
+<% if logged_in? %>
+
+<h1> <%= current_user.name %> </h1>
+
+<h2> Welcome - Registered User uniquement </h2>
+
+<p> Membres Uniquements </p>
+
+<p> <%= link_to "Click me", answer_path, class: "btn btn-success"%> </p>
+
+
+<% else %>
+
+<h1> Hello My friend </h1>
+
+<h2> and welcome back </h2>
+
+<p> Please Login </p>
+
+<p> <%= link_to "Log in", login_path, class: "btn btn-success" %> </p>
+
+
+<% end %>

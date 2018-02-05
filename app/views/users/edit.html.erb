@@ -1,0 +1,17 @@
+<h1> Editer mon profil </h1>
+
+<%= form_tag user_path(@user), method: :put do %>
+ 
+<%= render 'form' %>
+ 
+<div class="row">
+  <div class="col-md-6 col-md-offset-3"> 
+	<%= submit_tag "Edit User", class: "btn btn-primary" %>
+  </div>
+</div>
+
+<% end %>
+
+ <p> <%= link_to "delete profile", user_path(@user),
+              method: :delete,
+              data: { confirm: 'sure ?' } %> </p>
